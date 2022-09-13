@@ -1,0 +1,5 @@
+[build]
+command = "npm run start"
+publish = "dist"
+[dev]
+publish = "src"
