@@ -1,11 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
 
 const app = express();
+dotenv.config()
 app.use(express.json());
 
 const connect = () => {
-    return mongoose.connect("mongodb+srv://1212:1212@cluster0.i5ry6ko.mongodb.net/pfm");
+    return mongoose.connect(process.env.MONGO_URL);
 };
 
 const TransactionSchema = new mongoose.Schema({
@@ -75,7 +77,7 @@ app.get('/transcation', async (req, res) => {
     const transc = await Transction.find()
     return res.send(transc);
 });
-app.listen(3000, async () => {
+app.listen(3000 || process.env.PORT, async () => {
     await connect().then((ans) => {
 
         console.log("Connected Successful");
