@@ -1,0 +1,14 @@
+.form-step {
+    font-size: 34px ;
+    text-align: center;
+    color: #F55A00;
+    margin: 0 0 .5vh 0;
+    font-weight: bold;
+
+}
+
+.nextBtn {
+    border-radius: 0 20px 20px 0; 
+    display: inline-block;
+}
+
