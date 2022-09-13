@@ -2,4 +2,4 @@
 command = "npm run start"
 publish = "dist"
 [dev]
-publish = "app.js"
+publish = "index.js"
