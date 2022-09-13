@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 const connect = () => {
-    return mongoose.connect();
+    return mongoose.connect("mongodb+srv://1212:1212@cluster0.i5ry6ko.mongodb.net/pfm");
 };
 
 const TransactionSchema = new mongoose.Schema({
