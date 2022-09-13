@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const app = express();
 dotenv.config()
 app.use(express.json());
-
+var port = process.env.PORT || 3000;
 const connect = () => {
     return mongoose.connect(process.env.MONGO_URL);
 };
@@ -77,7 +77,7 @@ app.get('/transcation', async (req, res) => {
     const transc = await Transction.find()
     return res.send(transc);
 });
-app.listen(3000 || process.env.PORT, async () => {
+app.listen(port, async () => {
     await connect().then((ans) => {
 
         console.log("Connected Successful");
@@ -86,5 +86,5 @@ app.listen(3000 || process.env.PORT, async () => {
             console.log("Error in the Connection");
         })
 
-    console.log("Port 3000");
+    console.log("Port",port);
 });

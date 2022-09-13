@@ -1,1 +1,0 @@
-MONGO_URL ="mongodb+srv://1212:1212@cluster0.i5ry6ko.mongodb.net/pfm"
