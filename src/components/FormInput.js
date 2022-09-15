@@ -18,8 +18,8 @@ export default function FormInput({ placeholderText, ...rest }) {
 
                 className="form-control"
                 placeholder={placeholderText}
-                
-                
+
+
                 {...rest}
 
             />
