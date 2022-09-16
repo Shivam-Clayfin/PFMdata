@@ -1,0 +1,42 @@
+.form-step {
+  font-size: 34px;
+  text-align: center;
+  color: #f55a00;
+  margin: 0 0 0.5vh 0;
+  font-weight: bold;
+}
+
+.nextBtn {
+  border-radius: 0 20px 20px 0;
+  display: inline-block;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.centerr {
+  display: flex;
+
+  text-align: center;
+  justify-content: center;
+}
+
+.start {
+  margin-left: 10%;
+}
+.main {
+  width: 34%;
+  height: 34%;
+  background-color: blue;
+
+  margin: auto;
+}
+.contr {
+  background-color: rgb(241, 231, 231);
+  margin: auto;
+}
+.log {
+  max-width: 100%;
+}
