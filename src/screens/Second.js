@@ -156,7 +156,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
               <label style={{ marginLeft: 7 }}
                 htmlFor='1'
               >
-                Yes
+                Yes (1)
               </label>
 
               <input
@@ -171,7 +171,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
               <label style={{ marginLeft: 7 }}
                 htmlFor='0'
               >
-                No
+                No (0)
               </label>
             </div>
             <div className='start' style={{ paddingTop: "10px" }} >   Transaction_Currency_Code_ID:</div>
@@ -223,9 +223,21 @@ export default function Second({ page, setPage, formData, setFormData }) {
                 onChange={(e) => setFormData({ ...formData, CategoryID: e.target.value })}
               >
                 <option defaultValue value='0'>Open this for select Category ID</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Hotel</option>
+                <option value="2">Groceries</option>
+                <option value="3">Bank</option>
+                <option value="4">Medical</option>
+                <option value="5">Furniture</option>
+                <option value="6">Fuel</option>
+                <option value="7">Accounting</option>
+                <option value="8">Agricultural</option>
+                <option value="9">Architecture</option>
+                <option value="10">Art</option>
+                <option value="11">Books</option>
+                <option value="12">Bus</option>
+                <option value="13">Cab/Taxi</option>
+                <option value="14">Cable TV</option>
+                <option value="15">Contractors</option>
               </select>
             </div>
 
@@ -246,7 +258,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
                   className='btn btn-primary'
                   buttonText={'Next'}
                   onClick={() => {
-                    setFormData({ ...formData, MCCCodeID: Number(formData.MCCCodeID), TransactionCurrencyCodeID: Number(formData.TransactionCurrencyCodeID) });
+                    setFormData({ ...formData, ActiveFlag: Number(formData.ActiveFlag),MCCCodeID: Number(formData.MCCCodeID), TransactionCurrencyCodeID: Number(formData.TransactionCurrencyCodeID), TransactionModeID: (formData.TransactionModeID === '1' ? true : false)});
                     setPage(page + 1);
                   }}
                 />
