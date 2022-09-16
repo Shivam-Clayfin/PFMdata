@@ -41,7 +41,6 @@ export default function Fifth({ page, setPage, formData, setFormData }) {
             method: 'POST',
             body: data,
         });
-        console.log(out)
         
     };
     return (
