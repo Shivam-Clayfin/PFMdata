@@ -45,39 +45,6 @@ export default function Fifth({ page, setPage, formData, setFormData }) {
                 <div className='contr'>
                     <div>  <form >
                         <div className='centerr'><img className='log' src={Img1} alt="description" /></div>
-                        {/* <p className='start' style={{ paddingTop: "10px" }}>Categorized_Flag:</p>
-                        <div className='start'>
-
-                            <input
-                                type='radio'
-                                id='1'
-                                name='1'
-                                value='1'
-                                checked={formData.CategorizedFlag === '1'}
-                                onChange={(e) => setFormData({ ...formData, CategorizedFlag: e.target.value })}
-                            />
-                            <label style={{ marginLeft: 7 }}
-                                htmlFor='1'
-                            >
-                                Yes
-                            </label>
-
-                            <input
-                                style={{ marginLeft: 40 }}
-                                type='radio'
-                                id='0'
-                                name='0'
-                                value='0'
-                                checked={formData.CategorizedFlag === '0'}
-                                onChange={(e) => setFormData({ ...formData, CategorizedFlag: e.target.value })}
-                            />
-                            <label style={{ marginLeft: 7 }}
-                                htmlFor='0'
-                            >
-                                No
-                            </label>
-                        </div> */}
-
 
                         <div className="container">
                         CategorizedFlag
@@ -109,12 +76,9 @@ export default function Fifth({ page, setPage, formData, setFormData }) {
                                     className='btn btn-success'
                                     buttonText={'Submit'}
                                     onClick={() => {
-                                        // setFormData({ ...formData, CategorizedFlag: (formData.CategorizedFlag === '1' ? true : false)});
                                         submitbtn();
                                         alert('Submit Successfully');
                                         console.log(formData);
-                                        //console.log(typeof(formData.AccountTransactionID))
-
                                     }}
                                 />
                             </div>

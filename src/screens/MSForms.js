@@ -19,13 +19,13 @@ export default function MSForms() {
         LinkedAccountID: '',
 
         MCCCodeID: '',
-        ActiveFlag: '', //Yes or No 
+        ActiveFlag: '', 
         TransactionCurrencyCodeID: '',
-        TransactionModeID: '', //Yes or No *************** Bool
+        TransactionModeID: '', 
         CategoryID: '',
 
         MerchantID: '',
-        TransactionType: '', //Credit or Debit
+        TransactionType: '',
         NotAExpense: '',
         BalanceAmount: '',
         DestinationCurrency: '',
@@ -36,7 +36,7 @@ export default function MSForms() {
         Narration: '',
         TransactionReferenceNumber: '',
 
-        CategorizedFlag: false, // Yes or No ***************** Bool
+        CategorizedFlag: false,
 
     })
 
