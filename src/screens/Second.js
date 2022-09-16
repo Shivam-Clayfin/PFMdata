@@ -223,9 +223,21 @@ export default function Second({ page, setPage, formData, setFormData }) {
                 onChange={(e) => setFormData({ ...formData, CategoryID: e.target.value })}
               >
                 <option defaultValue value='0'>Open this for select Category ID</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="91">Hotel</option>
+                <option value="87">Groceries</option>
+                <option value="67">Bank</option>
+                <option value="101">Medical</option>
+                <option value="84">Furniture</option>
+                <option value="83">Fuel</option>
+                <option value="63">Accounting</option>
+                <option value="64">Agricultural</option>
+                <option value="65">Architecture</option>
+                <option value="66">Art</option>
+                <option value="68">Books</option>
+                <option value="69">Bus</option>
+                <option value="70">Cab/Taxi</option>
+                <option value="71">Cable TV</option>
+                <option value="72">Contractors</option>
               </select>
             </div>
 
