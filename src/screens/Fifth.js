@@ -1,73 +1,50 @@
 import React from 'react';
 import FormButton from '../components/FormButton';
 import './Style.css';
+import axios from "axios"
 import Img1 from "../components/Images/Img1.jpeg"
 
 export default function Fifth({ page, setPage, formData, setFormData }) {
+
+    const handleSubmit = () => {
+        var userData = {
+            AccountTransactionID: formData.AccountTransactionID, 
+            TransactionID: formData.TransactionID, 
+            TransactionAmount: formData.TransactionAmount, 
+            LinkedAccountID: formData.LinkedAccountID,
+            MCCCodeID: formData.MCCCodeID, 
+            ActiveFlag: formData.ActiveFlag, 
+            TransactionCurrencyCodeID: formData.TransactionCurrencyCodeID, 
+            TransactionModeID: formData.TransactionModeID, 
+            CategoryID: formData.CategoryID,
+            MerchantID: formData.MerchantID, 
+            TransactionType: formData.TransactionType, 
+            NotAExpense: formData.NotAExpense, 
+            BalanceAmount: formData.BalanceAmount, 
+            DestinationCurrency: formData.DestinationCurrency,
+            CurrencyCodeID: formData.CurrencyCodeID, 
+            AccountNumber: formData.AccountNumber, 
+            BankID: formData.BankID, 
+            Narration: formData.Narration, 
+            TransactionReferenceNumber: formData.TransactionReferenceNumber,
+            CategorizedFlag: formData.CategorizedFlag,
+        };
+        axios.post("https://pfmfake.herokuapp.com/transcation", userData).then((response) => {
+            console.log(response.status);
+            console.log("asasas",userData)
+        });
+        // fetch('https://pfmfake.herokuapp.com/transcation', {
+        //     method: 'POST',
+        //     headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
+        //     body: userData
+        // });
+    };
     return (
         <>
-
-            {/* <form style={{ marginRight: 270, marginLeft: 270,  }}>
-                <div style={{ margin: 17 }}>
-                    <p>Categorized_Flag:</p>
-                    <input
-                        type='radio'
-                        id='1'
-                        name='1'
-                        value = 'true'
-                        checked={formData.CategorizedFlag === 'true'}
-                        onChange={(e) => setFormData({ ...formData, CategorizedFlag: e.target.value })}
-                    />
-                    <label style={{ marginLeft: 7 }}
-                        htmlFor='1'
-                    >
-                        Yes
-                    </label>
-
-                    <input
-                        style={{ marginLeft: 40 }}
-                        type='radio'
-                        id='0'
-                        name='0'
-                        value='false'
-                        checked={formData.CategorizedFlag === 'false'}
-                        onChange={(e) => setFormData({ ...formData, CategorizedFlag: e.target.value })}
-                    />
-                    <label style={{ marginLeft: 7 }}
-                        htmlFor='0'
-                    >
-                        No
-                    </label>
-                </div>
-
-                <FormButton
-                    style={{ marginLeft: 70 }}
-                    className='btn btn-primary'
-                    buttonText={'Previous'}
-                    onClick={() => {
-                        return setPage(page - 1);
-
-                    }}
-                />
-
-                <FormButton
-                    style={{ marginLeft: 241 }}
-                    className='btn btn-success'
-                    buttonText={'Submit'}
-                    onClick={() => {
-                        alert('Submit Successfully');
-                        console.log(formData);
-                        //console.log(typeof(formData.AccountTransactionID))
-
-                    }}
-                />
-
-            </form>
-             */}
             <div className='main'>
                 <div className='contr'>
                     <div>  <form >
-                        <div className='centerr'><img className='log' src={Img1} alt="description"/></div>
+                        <div className='centerr'><img className='log' src={Img1} alt="description" /></div>
                         <p className='start' style={{ paddingTop: "10px" }}>Categorized_Flag:</p>
                         <div className='start'>
 
@@ -115,12 +92,7 @@ export default function Fifth({ page, setPage, formData, setFormData }) {
 
                                     className='btn btn-success'
                                     buttonText={'Submit'}
-                                    onClick={() => {
-                                        alert('Submit Successfully');
-                                        console.log(formData);
-                                        //console.log(typeof(formData.AccountTransactionID))
-
-                                    }}
+                                    onClick={() => handleSubmit()}
                                 />
                             </div>
                         </div>
