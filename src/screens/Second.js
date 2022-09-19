@@ -11,7 +11,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
       <div className='main'>
         <div className='contr'>
           <div>  <form >
-            <div className='centerr'><img className='log' src={Img1} alt="description"/></div>
+            <div className='centerr'><img className='log' src={Img1} alt="description" /></div>
 
             <div className='start' style={{ paddingTop: "10px" }}>    MCC_Code_ID:</div>
             <div className='centerr'>
@@ -105,6 +105,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
                 <option value="91">Hotel</option>
                 <option value="87">Groceries</option>
                 <option value="67">Bank Charges</option>
+
                 <option value="101">Medical</option>
                 <option value="84">Furniture</option>
                 <option value="83">Fuel</option>
@@ -118,6 +119,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
                 <option value="71">CAb/Taxi</option>
                 <option value="72">Cable/TV</option>
                 <option value="74">Contractor</option>
+
               </select>
             </div>
 
@@ -138,7 +140,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
                   className='btn btn-primary'
                   buttonText={'Next'}
                   onClick={() => {
-                    setFormData({ ...formData, ActiveFlag: Number(formData.ActiveFlag),MCCCodeID: Number(formData.MCCCodeID), TransactionCurrencyCodeID: Number(formData.TransactionCurrencyCodeID), TransactionModeID: (formData.TransactionModeID === '1' ? true : false)});
+                    setFormData({ ...formData, ActiveFlag: Number(formData.ActiveFlag), MCCCodeID: Number(formData.MCCCodeID), TransactionCurrencyCodeID: Number(formData.TransactionCurrencyCodeID), TransactionModeID: (formData.TransactionModeID === '1' ? true : false) });
                     setPage(page + 1);
                   }}
                 />
