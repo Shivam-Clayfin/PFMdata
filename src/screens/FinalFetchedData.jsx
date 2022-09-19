@@ -7,7 +7,7 @@ export default function FinalFetchedData() {
     const [refresh,setRefresh] = useState(true)
     const DeleteRow = (id)=>{
         console.log("id" ,id)
-         fetch("http://localhost:3000/Tdelete",{
+         fetch("https://pfmfake.herokuapp.com/Tdelete",{
             method: 'DELETE', // Method itself
             headers: {
              'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
