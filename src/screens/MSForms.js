@@ -37,7 +37,7 @@ export default function MSForms() {
         Narration: '',
         TransactionReferenceNumber: '',
 
-        CategorizedFlag: false, // Yes or No ***************** Bool
+        CategorizedFlag: false,
 
     })
 

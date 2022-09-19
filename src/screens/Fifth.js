@@ -77,12 +77,9 @@ export default function Fifth({ page, setPage, formData, setFormData }) {
                                     className='btn btn-success'
                                     buttonText={'Submit'}
                                     onClick={() => {
-                                        // setFormData({ ...formData, CategorizedFlag: (formData.CategorizedFlag === '1' ? true : false)});
                                         submitbtn();
                                         alert('Submit Successfully');
                                         console.log(formData);
-                                        //console.log(typeof(formData.AccountTransactionID))
-
                                     }}
                                 />
                             </div>
