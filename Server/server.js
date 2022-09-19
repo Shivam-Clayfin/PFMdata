@@ -25,7 +25,7 @@ const TransactionSchema = new mongoose.Schema({
     TransactionType: { type: String},
     NotAExpense: { type: Number},
     BalanceAmount: { type: Number},
-    Destination_Currency: { type: Number},
+    DestinationCurrency: { type: Number},
     CurrencyCodeID: { type: Number},
     AccountNumber: { type: Number},
     BankID: { type: Number},
@@ -59,9 +59,9 @@ app.get('/categ', async(req,res)=>{
     const categ = await Category.find()
     return res.send(categ)
 })
-app.get('/categss', async(req,res)=>{
-    const categ = await Category.find({ "EXPENSE_CATEGORY": "Hotel"})
-    return res.send(categ)
+app.delete('/Tdelete', async(req,res)=>{
+    let co = await Transction.deleteOne({"_id":req.body})
+    res.status(200).send(co)
 })
 
 app.post('/transcation', async (req, res) => {

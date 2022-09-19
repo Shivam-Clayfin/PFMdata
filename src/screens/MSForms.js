@@ -5,6 +5,7 @@ import Fourth from './Fourth';
 import Second from './Second';
 import Third from './Third';
 import './Style.css';
+import FinalFetchedData from './FinalFetchedData';
 
 
 export default function MSForms() {
@@ -12,23 +13,23 @@ export default function MSForms() {
     const [page, setPage] = useState(0);
 
     const [formData, setFormData] = useState({
-        AccountTransactionID: '',
+        AccountTransactionID: 0,
         TransactionID: '',
-        TransactionAmount: '',
+        TransactionAmount: 0,
         //TransactionTimeStamp : '',
-        LinkedAccountID: '',
+        LinkedAccountID: 0,
 
-        MCCCodeID: '',
-        ActiveFlag: '', 
-        TransactionCurrencyCodeID: '',
-        TransactionModeID: '', 
-        CategoryID: '',
+        MCCCodeID: 0,
+        ActiveFlag: '', //Yes or No 
+        TransactionCurrencyCodeID: 0,
+        TransactionModeID: '', //Yes or No *************** Bool
+        CategoryID: 0,
 
-        MerchantID: '',
-        TransactionType: '',
-        NotAExpense: '',
-        BalanceAmount: '',
-        DestinationCurrency: '',
+        MerchantID: 0,
+        TransactionType: '', //Credit or Debit
+        NotAExpense: 0,
+        BalanceAmount: 0,
+        DestinationCurrency: 0,
 
         CurrencyCodeID: '',
         AccountNumber: '',
@@ -79,14 +80,31 @@ export default function MSForms() {
 
     ];
 
+    const [on, Seton] = useState(true)
     return (
+
         <>
-            <div className='form-step'>
-                Page {page + 1}
-            </div>
-            <div className='form-box'>
-                {MSScreens[page]}
-            </div>
+        <button onClick={()=>Seton(!on)}>{on?<>Show Data</>:<>Show Form</>}</button>
+            {
+
+                !on ? 
+                <>
+                    <FinalFetchedData/>
+                </> :
+                    <>
+
+                        <div className='form-step'>
+
+                            Page {page + 1}
+                        </div>
+                        <div className='form-box'>
+                            {MSScreens[page]}
+                        </div>
+
+                    </>
+
+            }
+
         </>
     )
 }

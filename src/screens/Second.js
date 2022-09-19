@@ -35,7 +35,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
               <label style={{ marginLeft: 7 }}
                 htmlFor='1'
               >
-                Yes (1)
+                Yes
               </label>
 
               <input
@@ -50,7 +50,7 @@ export default function Second({ page, setPage, formData, setFormData }) {
               <label style={{ marginLeft: 7 }}
                 htmlFor='0'
               >
-                No (0)
+                No
               </label>
             </div>
             <div className='start' style={{ paddingTop: "10px" }} >   Transaction_Currency_Code_ID:</div>
@@ -104,7 +104,8 @@ export default function Second({ page, setPage, formData, setFormData }) {
                 <option defaultValue value='0'>Open this for select Category ID</option>
                 <option value="91">Hotel</option>
                 <option value="87">Groceries</option>
-                <option value="67">Bank</option>
+                <option value="67">Bank Charges</option>
+
                 <option value="101">Medical</option>
                 <option value="84">Furniture</option>
                 <option value="83">Fuel</option>
@@ -114,9 +115,11 @@ export default function Second({ page, setPage, formData, setFormData }) {
                 <option value="66">Art</option>
                 <option value="68">Books</option>
                 <option value="69">Bus</option>
-                <option value="70">Cab/Taxi</option>
-                <option value="71">Cable TV</option>
-                <option value="72">Contractors</option>
+                <option value="70">Bussiness</option>
+                <option value="71">CAb/Taxi</option>
+                <option value="72">Cable/TV</option>
+                <option value="74">Contractor</option>
+
               </select>
             </div>
 
