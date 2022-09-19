@@ -63,7 +63,7 @@ export default function First({ page, setPage, formData, setFormData }) {
                             className='btn btn-primary nextBtn'
                             buttonText={'Next'}
                             onClick={() => {
-                                setFormData({ ...formData, TransactionAmount: Number(formData.TransactionAmount), LinkedAccountID: Number(formData.LinkedAccountID) });
+                                setFormData({ ...formData, AccountTransactionID: Number(formData.AccountTransactionID) , TransactionAmount: Number(formData.TransactionAmount), LinkedAccountID: Number(formData.LinkedAccountID) });
                                 setPage(page + 1);
                             }}
                         /></div>
