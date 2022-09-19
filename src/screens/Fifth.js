@@ -46,6 +46,7 @@ export default function Fifth({ page, setPage, formData, setFormData }) {
                     <div>  <form >
                         <div className='centerr'><img className='log' src={Img1} alt="description" /></div>
 
+
                         <div className="container">
                         CategorizedFlag
                             <div className="toggle-switch">
@@ -76,9 +77,12 @@ export default function Fifth({ page, setPage, formData, setFormData }) {
                                     className='btn btn-success'
                                     buttonText={'Submit'}
                                     onClick={() => {
+                                        // setFormData({ ...formData, CategorizedFlag: (formData.CategorizedFlag === '1' ? true : false)});
                                         submitbtn();
                                         alert('Submit Successfully');
                                         console.log(formData);
+                                        //console.log(typeof(formData.AccountTransactionID))
+
                                     }}
                                 />
                             </div>
